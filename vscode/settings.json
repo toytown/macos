@@ -1,0 +1,48 @@
+{
+  "breadcrumbs.enabled": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.lineNumbers": "on",
+  "editor.codeLens": false,
+  "editor.folding": false,
+  "editor.glyphMargin": false,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.cursorBlinking": "blink",
+  "editor.renderWhitespace": "none",
+  "editor.suggestSelection": "first",
+  "editor.guides.indentation": false,
+  "editor.renderControlCharacters": false,
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.renderLineHighlight": "all",
+  "editor.fontLigatures": true,
+  "search.searchOnType": false,
+  // font settings
+  "editor.rename.enablePreview": false,
+  "editor.fontFamily": "Insolata, Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "'Source Code Pro for Powerline', Insolata, Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.scrollback": 90000,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.tabs.enabled": false,
+  "workbench.fontAliasing": "antialiased",
+  "workbench.statusBar.visible": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Cobalt2",
+  "explorer.compactFolders": false,
+
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/package-lock.json": true,
+    // Hide js files after running tsc.
+    "**/*.js": { "when": "$(basename).ts" }
+  },
+  "tabnine.experimentalAutoImports": true
+}
