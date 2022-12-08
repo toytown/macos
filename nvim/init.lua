@@ -1,4 +1,3 @@
-
 require("tuladhp.plugins-setup")
 require("tuladhp.core.options")
 require("tuladhp.core.keymaps")
@@ -15,3 +14,5 @@ require("tuladhp.plugins.lsp.null-ls")
 require("tuladhp.plugins.autopairs")
 require("tuladhp.plugins.treesitter")
 require("tuladhp.plugins.gitsigns")
+require("tuladhp.plugins.toggleterm")
+require("tuladhp.plugins.bufferline")
