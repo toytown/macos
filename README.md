@@ -112,6 +112,27 @@
   | ---------------------------------------- | ---------------------------------------- |
   | ![terminal_status](images/terminal_status.png) | ![terminal_status](images/status_config.png) ![terminal_status](images/add_component.png)|
 
+## Tmux
+
+- Multiplexer for terminal windows
+
+```
+    brew install tmux
+```
+
+| Keys                        | Description                              |
+| --------------------------- | ---------------------------------------- |
+| tmux new -s [session name]  | Start a new session                      |
+| ctrl+b d                    | Detach from session                      |
+| tmux ls                     | List sessions                            |
+| tmux a -t [name of session] | Attach to named session                  |
+| ctrl+b "                    | Split panes horizontally                 |
+| ctrl+b %                    | Split panes vertically                   |
+| ctrl+b x                    | Kill current pane                        |
+| ctrl+b [arrow key           | Move to another pane                     |
+| ctrl+b o                    | Cycle through panes                      |
+| ctrl+b r <H, J, K, L>       | Resize panes horizontally and vertically |
+
 ## Install oh-my-zsh
 
 1. Install under your /home/.oh-my-zsh folder
@@ -125,16 +146,15 @@
 
 ```
     # autosuggesions plugin
-
     git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
     # zsh-syntax-highlighting plugin
-
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
     # zsh-autocomplete plugin
-
     git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+    cd zsh-autocomplete source
+    ./zsh-autocomplete.plugin.zsh
 ```
 
 3. Configure \~/.zshrc to use the above installed plugins
