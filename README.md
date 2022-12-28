@@ -138,11 +138,11 @@
 1. Install under your /home/.oh-my-zsh folder
 
 ```
-  sh -c "$(curl -fsSL <https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh>)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ```
 
-2. Install useful plugins -- zsh auto-suggestions zsh-syntax-highlighting plugin zsh-autocomplete plugin
+2. Install useful plugins -- zsh auto-suggestions zsh-syntax-highlighting plugin
 
 ```
     # autosuggesions plugin
@@ -151,7 +151,7 @@
     # zsh-syntax-highlighting plugin
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
-    # zsh-autocomplete plugin
+    # zsh-autocomplete plugin (optional)
     git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
     cd zsh-autocomplete source
     ./zsh-autocomplete.plugin.zsh
@@ -183,6 +183,23 @@
     bindkey "^[[1;5D" backward-word
     bindkey "^[[1;5C" forward-word
 
+```
+
+6. Install powerlevel10k theme
+
+```
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+```
+
+```
+    # aliases for isengard
+    alias ig=isengardcli
+    alias igl='isengardcli list'
+    alias iga='isengardcli assume'
+
+    # vim aliases
+    alias vim="nvim"
 ```
 
 5. Add aliases for isengard
@@ -249,7 +266,10 @@
 ### Installation asdf
 
 ```
+    # Install dependencies
+    brew install coreutils curl git
 
+    # Install asdf
     brew install asdf
 
     # Add any plugin you need (terraform, python, kubectl, nodejs[)]{.underline}
@@ -257,7 +277,10 @@
     $ asdf plugin-add terraform https://github.com/asdf-community/asdf-hashicorp.git
     $ asdf plugin-add python
     $ asdf plugin-add kubectl
-    $ asdf plugin add nodejs:16.18.0
+
+    # Install 
+    $ asdf install nodejs 16.18.0
+    $ asdf install python latest
 
 ```
 
@@ -265,7 +288,24 @@
 
 ```
     $ asdf current terraform
-    $ asdf list
+    $ asdf list-all nodejs
+    $ asdf list-all python
+    $ asdf current python
+    $ asdf current nodejs
+
+```
+### Install default packages by npm
+
+```
+    $ touch ~/.default-npm-package
+    $ cat ~/.default-npm-packages
+    pnpm
+    npm-check-updates
+    degit
+    prettier
+    neovim
+
+    $ asdf reshim nodejs
 
 ```
 
@@ -273,12 +313,17 @@
 
 - Global defaults are managed in \$HOME/.tool-versions. Local versions are defined in the \$PWD/.tool-versions
 
+    # Set global or local version
+```    
+    asdf global nodejs 16.18.0
+    asdf local python 3.11.1
+```
   <img src="images/asdf_tools.png" alt="asdf" width="300"/>
 
 - Add following line to tghe endo of .zshrc to source the asdf
 
 ```
-  . /usr/local/opt/asdf/libexec/asdf.sh
+  source $HOME/.asdf/asdf.sh
 ```
 
 ## Visual Studio
