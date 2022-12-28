@@ -378,42 +378,44 @@ A vim like editor with large sets of plugins and community.
   | ⇓ + sh | Split window horizontally |
   | ⇓ + se | Split window equally |
   | ⇓ + sx | Split window close |
-  | \^ + u | Scroll up half page |
-  | \^ + d | Scroll down half page |
+  | ^ + H | Navigate to horizontal window |
+  | ^ + M | Navigate between horizontal windows |
+  | ^ + u | Scroll up half page |
+  | ^ + d | Scroll down half page |
   | H, M, L | Move to Highest, Middle and Lowest viewport |
   | 0, \$ | Move to first or end of line |
-  | \^ + o | Go to older cursor position |
-  | \^ + i | Go to newer position in the tab (next tab) |
+  | ^ + o | Go to older cursor position |
+  | ^ + i | Go to newer position in the tab (next tab) |
   | ^ + ww | Toggle between Treee and File explorer |
 
 - Editing
 
-  | Shortcut Key                      | Description                                  |
-  | --------------------------------- | -------------------------------------------- |
-  | <line-number>gg                   | Go to line number                            |
-  | <line-number> + j,k               | Go to relative line number                   |
-  | :noh                              | Clear results                                |
-  | ysiw                              | Surround word with quotes                    |
-  | ysb                               | Surround word with brackets                  |
-  | ds                                | Revert to original                           |
-  | yw + grw                          | Copy selected word and replace the selection |
-  | I                                 | Insert at beginning of line                  |
-  | A                                 | Append to the current line                   |
-  | w, b                              | Move word or back                            |
-  | e                                 | Move to end of the word                      |
-  | cc                                | Change current line                          |
-  | (                                 | Sentences forward                            |
-  | )                                 | Sentences backward                           |
-  | {                                 | Move Paragraph forward                       |
-  | }                                 | Move Paragraph backward                      |
-  | f {char}                          | Move to specific char                        |
-  | cc                                | Change current line                          |
-  | %s/\<search-str\>/\<replace-str\> | Search replace                               |
-  | /{pattern}                        | Search forward                               |
-  | ?{pattern}                        | Search backward                              |
-  | %                                 | Jump to matching ([{}])                      |
-  | ^ + v , shift + i, Esc            | Column mode editing using the combination    |
-  | ^ + M                             | Move horizontall to middle of the line       |
+  | Shortcut Key                  | Description                                  |
+  | ----------------------------- | -------------------------------------------- |
+  | <line-number>gg               | Go to line number                            |
+  | <line-number> + j,k           | Go to relative line number                   |
+  | :noh                          | Clear results                                |
+  | ysiw                          | Surround word with quotes                    |
+  | ysb                           | Surround word with brackets                  |
+  | ds                            | Revert to original                           |
+  | yw + grw                      | Copy selected word and replace the selection |
+  | I                             | Insert at beginning of line                  |
+  | A                             | Append to the current line                   |
+  | w, b                          | Move word or back                            |
+  | e                             | Move to end of the word                      |
+  | cc                            | Change current line                          |
+  | (                             | Sentences forward                            |
+  | )                             | Sentences backward                           |
+  | {                             | Move Paragraph forward                       |
+  | }                             | Move Paragraph backward                      |
+  | f {char}                      | Move to specific char                        |
+  | cc                            | Change current line                          |
+  | %s/<search-str>/<replace-str> | Search replace                               |
+  | /{pattern}                    | Search forward                               |
+  | ?{pattern}                    | Search backward                              |
+  | %                             | Jump to matching ([{}])                      |
+  | ^ + v , shift + i, Esc        | Column mode editing using the combination    |
+  | ^ + M                         | Move horizontall to middle of the line       |
 
 - LSP
 
