@@ -378,8 +378,8 @@ A vim like editor with large sets of plugins and community.
   | ⇓ + sh | Split window horizontally |
   | ⇓ + se | Split window equally |
   | ⇓ + sx | Split window close |
-  | ^ + H | Navigate to horizontal window |
-  | ^ + M | Navigate between horizontal windows |
+  | ^ + H, L | Navigate to horizontal windows |
+  | ^ + J, K | Navigate between vertical windows |
   | ^ + u | Scroll up half page |
   | ^ + d | Scroll down half page |
   | H, M, L | Move to Highest, Middle and Lowest viewport |
