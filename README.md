@@ -1,4 +1,28 @@
-[TOC]
+- [Desktop](#desktop)
+  - [Dock, Mission-Controls &amp; Shortcuts](#dock-mission-controls--shortcuts)
+  - [Finder - Settings and shortcuts](#finder---settings-and-shortcuts)
+  - [Iterm2 - Settings](#iterm2---settings)
+    - [Tmux](#tmux)
+    - [Install oh-my-zsh](#install-oh-my-zsh)
+  - [Isengard cli](#isengard-cli)
+  - [Firefox](#firefox)
+    - [Multi-container](#multi-container)
+    - [Chrome Extension: Isengard](#chrome-extension-isengard)
+- [Development](#development)
+  - [asdf](#asdf)
+    - [Installation asdf](#installation-asdf)
+    - [List plugins and show current version](#list-plugins-and-show-current-version)
+    - [Install default packages by npm](#install-default-packages-by-npm)
+    - [Set version of the tool](#set-version-of-the-tool)
+    - [Set global or local version](#set-global-or-local-version)
+  - [Visual Studio](#visual-studio)
+    - [Useful Extensions](#useful-extensions)
+    - [Settings](#settings)
+    - [Settings (workspace)](#settings-workspace)
+  - [Neovim](#neovim)
+    - [Installation :](#installation-)
+    - [Documentation:](#documentation)
+    - [Shortcuts](#shortcuts)
 
 # Desktop
 
@@ -299,11 +323,11 @@
     $ asdf reshim nodejs
 ```
 
-#### Set version of the tool
+### Set version of the tool
 
 - Global defaults are managed in \$HOME/.tool-versions. Local versions are defined in the \$PWD/.tool-versions
 
-  # Set global or local version
+### Set global or local version
 
 ```
     asdf global nodejs 16.18.0
