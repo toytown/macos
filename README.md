@@ -1,6 +1,8 @@
-# macos
+[toc]
 
-## Desktop
+# Desktop
+
+## Dock, Mission-Controls & Shortcuts
 
 1. Create multiple Desktops spaces and use desktop to do separate tasks (see **system preferences > Mission Control**)
    | Keys | Description |
@@ -42,7 +44,7 @@
   | --------------------------------------- | --------------------------------------- |
   | ![dock_menubar](images/doc_n_menu1.png) | ![dock_menubar](images/doc_n_menu2.png) |
 
-## Finder
+## Finder - Settings and shortcuts
 
 1. Finder preferences
 
@@ -72,7 +74,7 @@
   | ⌘ + ,       | Open preferences            |
   | ⌘ + 1, 2, 3 | List view, icon view...     |
 
-## Iterm2
+## Iterm2 - Settings
 
 1. Terminal Settings: (Go to **Profiles > Default > General** )
 
@@ -112,7 +114,7 @@
   | ---------------------------------------- | ---------------------------------------- |
   | ![terminal_status](images/terminal_status.png) | ![terminal_status](images/status_config.png) ![terminal_status](images/add_component.png)|
 
-## Tmux
+### Tmux
 
 - Multiplexer for terminal windows
 
@@ -133,7 +135,7 @@
 | ctrl+b o                    | Cycle through panes                      |
 | ctrl+b r <H, J, K, L>       | Resize panes horizontally and vertically |
 
-## Install oh-my-zsh
+### Install oh-my-zsh
 
 1. Install under your /home/.oh-my-zsh folder
 
@@ -184,7 +186,17 @@
     bindkey "^[[1;5C" forward-word
 
 ```
+5. Add aliases for isengard, nvim etc
 
+```
+    # aliases for isengard
+    alias ig=isengardcli
+    alias igl='isengardcli list'
+    alias iga='isengardcli assume'
+
+    # vim aliases
+    alias vim="nvim"
+```
 6. Install powerlevel10k theme
 
 ```
@@ -192,31 +204,9 @@
 
 ```
 
-```
-    # aliases for isengard
-    alias ig=isengardcli
-    alias igl='isengardcli list'
-    alias iga='isengardcli assume'
-
-    # vim aliases
-    alias vim="nvim"
-```
-
-5. Add aliases for isengard
-
-```
-    # aliases for isengard
-    alias ig=isengardcli
-    alias igl='isengardcli list'
-    alias iga='isengardcli assume'
-
-    # vim aliases
-    alias vim="nvim"
-```
-
 ## Isengard cli
 
-1. Watch this video https://broadcast.amazon.com/videos/174536
+1. Command overview
    | isengard command | description |
    | ---------------------------------------- | ---------------------------------------- |
    |isengardcli assume <account-name> | Select list or provide account name |
@@ -225,17 +215,18 @@
    |Isengardcli ls | List of accounts |
    |isengardcli assume <account-name> | Select list or provide account name |
 
-1. Following are isengard aliases created in .zshrc file
+1. Following isengard aliases created in .zshrc file
    | isengard command | description |
    | ---------------------------------------- | ---------------------------------------- |
    | iga | Isengard assume |
    | igl | Isengard list |
    | igo | Isengard opeen |
 
-## Firefox multi-container
+## Firefox
 
-- Opens account console in new session (useful for multi account
-  testing)
+### Multi-container
+
+- Opens account console in new session (useful for multi account testing)
 
 - Shows container info
 
@@ -245,7 +236,7 @@
 
   ![firefox_multi_container2](images/firefox_multicontainer2.png)
 
-## Firefox / Chrome Extension: Isengard
+### Chrome Extension: Isengard
 
 - Enables to assume roles and switch between Isengard accounts
 
@@ -257,11 +248,9 @@
 
 ## asdf
 
-- Tool version manager. All tool version definitions are contained
-  within one file (.tool-versions)
+- Tool version manager. All tool version definitions are contained within one file (.tool-versions)
 
-- Ensures teams are using the exact same versions of tools, with
-  support for many tools via a plugin system
+- Ensures teams are using the exact same versions of tools, with support for many tools via a plugin system
 
 ### Installation asdf
 
@@ -288,12 +277,13 @@
 
 ```
     $ asdf current terraform
+    $ asdf list
     $ asdf list-all nodejs
     $ asdf list-all python
     $ asdf current python
     $ asdf current nodejs
-
 ```
+
 ### Install default packages by npm
 
 ```
@@ -303,10 +293,8 @@
     npm-check-updates
     degit
     prettier
-    neovim
-
+    
     $ asdf reshim nodejs
-
 ```
 
 #### Set version of the tool
@@ -320,7 +308,7 @@
 ```
   <img src="images/asdf_tools.png" alt="asdf" width="300"/>
 
-- Add following line to tghe endo of .zshrc to source the asdf
+- Add following line to the endo of .zshrc to source the asdf
 
 ```
   source $HOME/.asdf/asdf.sh
@@ -328,7 +316,7 @@
 
 ## Visual Studio
 
-### Add following extensions
+### Useful Extensions
 
 | Category        | Extensions                                                               |
 | --------------- | ------------------------------------------------------------------------ |
@@ -338,7 +326,7 @@
 | Format Checker  | Prettier                                                                 |
 | DevOps          | LiveShare, Docker Containers, Markdown                                   |
 
-### Some of the key setings
+### Settings
 
 | Category                               | Description         |
 | -------------------------------------- | ------------------- |
@@ -346,13 +334,13 @@
 | editor.tabSize                         | 2                   |
 | editor.minimap.enabled                 | false               |
 | terminal.integrated.defaultProfile.osx | zsh                 |
-| breadcrumbs.enabled                    | true                |
+| breadcrumbs.enabled                    | false               |
 | terrminal.integrated.scrollback        | 90000               |
 | workbench.iconTheme                    | material-icon-theme |
 | explorer.compactFolders                | false               |
 | editor.rename.enablePreview            | false               |
 
-### Settings
+### Settings (workspace)
 
 ```
     {
@@ -407,7 +395,7 @@
 
 ## Neovim
 
-A vim like editor with large sets of plugins and community.
+A vim based editor with large sets of plugins and community support.
 
 ### Installation :
 
