@@ -1,6 +1,4 @@
-# Content
-
-[toc]
+[TOC]
 
 # Desktop
 
