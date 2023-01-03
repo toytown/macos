@@ -1,3 +1,5 @@
+# Content
+
 [toc]
 
 # Desktop
@@ -186,6 +188,7 @@
     bindkey "^[[1;5C" forward-word
 
 ```
+
 5. Add aliases for isengard, nvim etc
 
 ```
@@ -197,6 +200,7 @@
     # vim aliases
     alias vim="nvim"
 ```
+
 6. Install powerlevel10k theme
 
 ```
@@ -267,7 +271,7 @@
     $ asdf plugin-add python
     $ asdf plugin-add kubectl
 
-    # Install 
+    # Install
     $ asdf install nodejs 16.18.0
     $ asdf install python latest
 
@@ -293,7 +297,7 @@
     npm-check-updates
     degit
     prettier
-    
+
     $ asdf reshim nodejs
 ```
 
@@ -301,11 +305,13 @@
 
 - Global defaults are managed in \$HOME/.tool-versions. Local versions are defined in the \$PWD/.tool-versions
 
-    # Set global or local version
-```    
+  # Set global or local version
+
+```
     asdf global nodejs 16.18.0
     asdf local python 3.11.1
 ```
+
   <img src="images/asdf_tools.png" alt="asdf" width="300"/>
 
 - Add following line to the endo of .zshrc to source the asdf
