@@ -109,17 +109,22 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- using packer.nvim
+	-- bufferline
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 
-	-- install without yarn or npm
+	-- markup preview
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = function()
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
-
+	use({
+		"goolord/alpha-nvim",
+		config = function()
+			require("alpha").setup(require("alpha.themes.dashboard").config)
+		end,
+	})
 	if packer_bootstrap then
 		require("packer").sync()
 	end
