@@ -497,6 +497,29 @@ A vim based editor with large sets of plugins and community support.
   | %                             | Jump to matching ([{}])                      |
   | ^ + v , shift + i, Esc        | Column mode editing using the combination    |
   | ^ + M                         | Move horizontall to middle of the line       |
+  | ==                            | Indent                                       |
+
+- Advance Horizontal Motion
+
+  | Shortcut Key | Description                                       |
+  | ------------ | ------------------------------------------------- |
+  | viw          | Select word irrespective of where your curoser is |
+  | f {          | Move forward to char {                            |
+  | VY           | Visually copy a line                              |
+  | VD           | Visually delete a line                            |
+  | f {          | Move forward to char {                            |
+  | di(          | Visual delete of anything inside () braces        |
+  | dt{          | Visual delete of anything before the char {       |
+
+- Advance Vertical Motion
+
+  | Shortcut Key | Description                                         |
+  | ------------ | --------------------------------------------------- |
+  | va{          | Select all lines between {}                         |
+  | va{V         | Select all lines between {} and turn into line mode |
+  | yi{          | Copy anythiong between {}                           |
+  | >4j          | Indent by 4 spaces                                  |
+  | dap          | Delete all contiguous lines including new line      |
 
 - LSP
 
