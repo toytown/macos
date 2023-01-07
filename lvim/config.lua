@@ -23,7 +23,7 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
--- disable up/down arrow keys
+-- disable up/down arrow keys (customizations)
 vim.keymap.set("n", "<Left>", "<nop>")
 vim.keymap.set("n", "<Right>", "<nop>")
 vim.keymap.set("n", "<Up>", "<nop>")
@@ -32,16 +32,16 @@ vim.keymap.set("n", "<Down>", "<nop>")
 -- delete single character without copying into register
 vim.keymap.set("n", "x", '"_x')
 
--- split windows [
+-- split windows (customization)
 lvim.keys.normal_mode["|"] = ":vsplit<CR>"
 lvim.keys.normal_mode["-"] = ":split<CR>"
 
--- bufferline shortcuts
+-- bufferline shortcuts (customization)
 lvim.keys.normal_mode["<Tab>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-Tab>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 
--- toggleterm
+-- toggleterm (customization)
 lvim.builtin.terminal.direction = "horizontal"
 lvim.builtin.terminal.open_mapping = "<C-t>"
 lvim.builtin.terminal.shading_factor = "1"
@@ -58,7 +58,11 @@ lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
+
+-- customizations
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.nvimtree.setup.actions.change_dir.restrict_above_cwd = true
+lvim.builtin.nvimtree.setup.git.ignore = true
 
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
@@ -105,6 +109,7 @@ formatters.setup({
 local linters = require("lvim.lsp.null-ls.linters")
 linters.setup({
 	{ command = "flake8", filetypes = { "python" } },
+	{ command = "eslint", filetypes = { "typescript", "typescriptreact" } },
 	{
 		command = "shellcheck",
 		args = { "--severity", "warning" },

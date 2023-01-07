@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws docker kubectl zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
+plugins=(git aws docker kubectl zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -130,6 +130,13 @@ alias igl='isengardcli list'
 alias iga='isengardcli assume'
 
 # vim aliases
-alias vim="nvim"
+export PATH=$PATH:~/.local/bin
+alias lv="lvim"
+alias vim="lvim"
+
+export GOPROXY=direct
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 . /usr/local/opt/asdf/libexec/asdf.sh
