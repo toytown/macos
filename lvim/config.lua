@@ -3,6 +3,9 @@
  `lvim` is the global options object
 ]]
 
+-- contains user specific settings
+require("user.options")
+
 -- vim options
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
@@ -11,9 +14,9 @@ vim.opt.relativenumber = true
 -- general
 lvim.log.level = "info"
 lvim.format_on_save = {
-	enabled = true,
-	pattern = "*.lua",
-	timeout = 1000,
+  enabled = true,
+  pattern = "*.lua",
+  timeout = 1000,
 }
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -22,29 +25,6 @@ lvim.format_on_save = {
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-
--- disable up/down arrow keys (customizations)
-vim.keymap.set("n", "<Left>", "<nop>")
-vim.keymap.set("n", "<Right>", "<nop>")
-vim.keymap.set("n", "<Up>", "<nop>")
-vim.keymap.set("n", "<Down>", "<nop>")
-
--- delete single character without copying into register
-vim.keymap.set("n", "x", '"_x')
-
--- split windows (customization)
-lvim.keys.normal_mode["|"] = ":vsplit<CR>"
-lvim.keys.normal_mode["-"] = ":split<CR>"
-
--- bufferline shortcuts (customization)
-lvim.keys.normal_mode["<Tab>"] = ":BufferLineCycleNext<CR>"
-lvim.keys.normal_mode["<S-Tab>"] = ":BufferLineCyclePrev<CR>"
-lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
-
--- toggleterm (customization)
-lvim.builtin.terminal.direction = "horizontal"
-lvim.builtin.terminal.open_mapping = "<C-t>"
-lvim.builtin.terminal.shading_factor = "1"
 
 -- -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
@@ -97,31 +77,31 @@ lvim.builtin.treesitter.auto_install = true
 -- end
 
 -- -- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
-local formatters = require("lvim.lsp.null-ls.formatters")
-formatters.setup({
-	{ command = "stylua" },
-	{
-		command = "prettier",
-		extra_args = { "--print-width", "120" },
-		filetypes = { "typescript", "typescriptreact" },
-	},
-})
-local linters = require("lvim.lsp.null-ls.linters")
-linters.setup({
-	{ command = "flake8", filetypes = { "python" } },
-	{ command = "eslint", filetypes = { "typescript", "typescriptreact" } },
-	{
-		command = "shellcheck",
-		args = { "--severity", "warning" },
-	},
-})
+-- local formatters = require("lvim.lsp.null-ls.formatters")
+-- formatters.setup({
+-- 	{ command = "stylua" },
+-- 	{
+-- 		command = "prettier",
+-- 		extra_args = { "--print-width", "100" },
+-- 		filetypes = { "typescript", "typescriptreact" },
+-- 	},
+-- })
+-- local linters = require("lvim.lsp.null-ls.linters")
+-- linters.setup({
+-- 	{ command = "flake8", filetypes = { "python" } },
+-- 	{ command = "eslint", filetypes = { "typescript", "typescriptreact" } },
+-- 	{
+-- 		command = "shellcheck",
+-- 		args = { "--severity", "warning" },
+-- 	},
+-- })
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 -- lvim.plugins = {
---     {
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
+-- 	{
+-- 		"folke/trouble.nvim",
+-- 		cmd = "TroubleToggle",
+-- 	},
 -- }
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
