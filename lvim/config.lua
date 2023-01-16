@@ -10,13 +10,15 @@ require("user.options")
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.relativenumber = true
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- general
 lvim.log.level = "info"
 lvim.format_on_save = {
-  enabled = true,
-  pattern = "*.lua",
-  timeout = 1000,
+	enabled = true,
+	pattern = "*.lua",
+	timeout = 1000,
 }
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -42,7 +44,7 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 -- customizations
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.nvimtree.setup.actions.change_dir.restrict_above_cwd = true
-lvim.builtin.nvimtree.setup.git.ignore = true
+lvim.builtin.project.manual_mode = true
 
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true

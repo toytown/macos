@@ -46,38 +46,34 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 
 -- customizations
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
-lvim.builtin.nvimtree.setup.actions.change_dir.restrict_above_cwd = true
 lvim.builtin.nvimtree.setup.git.ignore = true
 
 -- -- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
-	{ command = "stylua" },
-	{
-		command = "prettier",
-		extra_args = { "--print-width", "120" },
-		filetypes = { "typescript", "typescriptreact" },
-	},
+  { command = "stylua" },
+  {
+    command = "prettier",
+    extra_args = { "--print-width", "120" },
+    filetypes = { "typescript", "typescriptreact" },
+  },
 })
 local linters = require("lvim.lsp.null-ls.linters")
 linters.setup({
-	{ command = "flake8", filetypes = { "python" } },
-	{ command = "eslint", filetypes = { "typescript", "typescriptreact" } },
-	{
-		command = "shellcheck",
-		args = { "--severity", "warning" },
-	},
+  { command = "flake8", filetypes = { "python" } },
+  { command = "eslint", filetypes = { "typescript", "typescriptreact" } },
+  {
+    command = "shellcheck",
+    args = { "--severity", "warning" },
+  },
 })
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
-	{
-		"folke/trouble.nvim",
-		cmd = "TroubleToggle",
-	},
-	{
-		"folke/tokyonight.nvim",
-	},
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
 }
 lvim.keys.normal_mode["<leader>tt"] = ":TroubleToggle<CR>"
 lvim.keys.normal_mode["<leader>tw"] = ":TroubleToggle workspace_diagnostics<CR>"
