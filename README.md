@@ -1,5 +1,5 @@
 - [Desktop](#desktop)
-  - [Dock, Mission-Controls &amp; Shortcuts](#dock-mission-controls--shortcuts)
+  - [Dock, Mission-Controls \& Shortcuts](#dock-mission-controls--shortcuts)
   - [Finder - Settings and shortcuts](#finder---settings-and-shortcuts)
   - [Iterm2 - Settings](#iterm2---settings)
     - [Tmux](#tmux)
@@ -19,7 +19,7 @@
     - [Useful Extensions](#useful-extensions)
     - [Settings](#settings)
     - [Settings (workspace)](#settings-workspace)
-  - [Neovim](#neovim)
+  - [Lunarvim](#lunarvim)
     - [Installation :](#installation-)
     - [Documentation:](#documentation)
     - [Shortcuts](#shortcuts)
@@ -421,34 +421,28 @@
 
 ```
 
-## Neovim
+## Lunarvim
 
 A vim based editor with large sets of plugins and community support.
 
 ### Installation :
 
-```
-    $ brew install neovim
-    $ brew install ripgrep (needed for live-grep in Telescope)
-```
+https://www.lunarvim.org/docs/installation
 
 ### Documentation:
 
-- <https://www.youtube.com/watch?v=vdn_pKJUda8>
-- <https://www.youtube.com/watch?v=b7OguLuaYvE>
-- <https://github.com/neovim/neovim>
-- <https://github.com/hackorum/nfs>
+- <https://www.lunarvim.org/docs/beginners-guide>
+- <https://www.lunarvim.org/docs/configuration>
+- <https://medium.com/@chrisatmachine/lunarvim-advanced-pyright-lsp-configuration-usage-665a14decb77>
 
 ### Shortcuts
 
 - Tab Navigation
 
-  | Shortcut Key | Description  |
-  | ------------ | ------------ |
-  | ⇓ + to       | Tab open     |
-  | ⇓ + tx       | Tab close    |
-  | ⇓ + tn       | Tab next     |
-  | ⇓ + tp       | Tab previous |
+  | Shortcut Key | Description |
+  | ------------ | ----------- |
+  | ⇓ + tab      | Tab open    |
+  | ⇓ + x        | Tab close   |
 
 - Windows
   | Shortcut Key | Description |
@@ -466,7 +460,6 @@ A vim based editor with large sets of plugins and community support.
   | H, M, L | Move to Highest, Middle and Lowest viewport |
   | 0, \$ | Move to first or end of line |
   | ^ + o | Go to older cursor position |
-  | ^ + i | Go to newer position in the tab (next tab) |
   | ^ + ww | Toggle between Treee and File explorer |
 
 - Editing
@@ -498,6 +491,13 @@ A vim based editor with large sets of plugins and community support.
   | ^ + v , shift + i, Esc        | Column mode editing using the combination    |
   | ^ + M                         | Move horizontall to middle of the line       |
   | ==                            | Indent                                       |
+  | gg + == + G                   | Indent entire file                           |
+
+- Insert Mode Editing
+  | Shortcut Key | Description |
+  | -------------------------- | ------------------------ |
+  | ctrl + o + any normal mode | Use normal mode function |
+  | ctrl + w | Delete previous word |
 
 - Advance Horizontal Motion
 
@@ -529,7 +529,7 @@ A vim based editor with large sets of plugins and community support.
   | ⇓ + gD           | Go to declaration                        |
   | ⇓ + gd           | See definitions and make edits in window |
   | ⇓ + gi           | Go to implementation                     |
-  | ⇓ + gr           | Rename                                   |
+  | ⇓ + gr           | Go to references                         |
   | ⇓ + ca           | Code Action                              |
   | ⇓ + rn           | Smart rename                             |
   | ⇓ + K            | Documentation for what is under cursor   |
@@ -538,3 +538,12 @@ A vim based editor with large sets of plugins and community support.
   | ⇓ + N            | Jump to previous diagonistic             |
   | gcc              | Comment line                             |
   | visual mode + gc | Block comment                            |
+  | gb               | Block comment                            |
+
+- Search
+
+  | Shortcut Key | Description                              |
+  | ------------ | ---------------------------------------- |
+  | ⇓ + st       | Search text                              |
+  | ⇓ + sr       | Search recent files                      |
+  | ⇓ + gd       | See definitions and make edits in window |

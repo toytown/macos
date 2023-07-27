@@ -4,7 +4,7 @@
   "editor.wordWrap": "on",
   "editor.lineNumbers": "on",
   "editor.codeLens": false,
-  "editor.folding": false,
+  "editor.folding": true,
   "editor.glyphMargin": false,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
