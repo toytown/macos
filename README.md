@@ -2,7 +2,7 @@
   - [Dock, Mission-Controls \& Shortcuts](#dock-mission-controls--shortcuts)
   - [Finder - Settings and shortcuts](#finder---settings-and-shortcuts)
   - [Iterm2 - Settings](#iterm2---settings)
-    - [Tmux](#tmux)
+    - [Browser](#browser)
     - [Install oh-my-zsh](#install-oh-my-zsh)
   - [Isengard cli](#isengard-cli)
   - [Firefox](#firefox)
@@ -44,12 +44,15 @@
    | ⌘ + ⌥+ Q | Force quit the app |
    | ⌘ + ⌥+ Esc | Chose multiple apps to quit |
    | ⌘ + M | Minimize Window |
+   | ⌃ + ⌘ + F | Toggle between max and normal |
    | ⌘ + tab | Switch next app |
    | ⌘ + ⇧+ tab | Switch previous app |
    | ⌘ + ⇧ + Q | Log out |
    | ⌥ + D | Go to the dock |
    | ⌥ + ⌘ + D | Show or hide the dock |
    | ⌃+ ⌘ + Q | Lock your screen |
+   
+   
 
    ![keyboard](images/keyboard.png)
 
@@ -87,7 +90,7 @@
   | ⌘ + I       | Get more info about file    |
   | ⌘ + D       | Duplicate the file          |
   | ⇧ + ⌘ + D   | Go to Desktop               |
-  | ⇧ +⌘ + H    | Go to home folder           |
+  | ⇧ + ⌘ + H    | Go to home folder           |
   | ⌘ + F       | Find                        |
   | ⌘ + G       | Find again                  |
   | ⌘ + O       | Open selected item or file  |
@@ -138,27 +141,18 @@
   | ---------------------------------------- | ---------------------------------------- |
   | ![terminal_status](images/terminal_status.png) | ![terminal_status](images/status_config.png) ![terminal_status](images/add_component.png)|
 
-### Tmux
+### Browser
 
-- Multiplexer for terminal windows
-
-```
-    brew install tmux
-```
-
-| Keys                        | Description                              |
-| --------------------------- | ---------------------------------------- |
-| tmux new -s [session name]  | Start a new session                      |
-| ctrl+b d                    | Detach from session                      |
-| tmux ls                     | List sessions                            |
-| tmux a -t [name of session] | Attach to named session                  |
-| ctrl+b "                    | Split panes horizontally                 |
-| ctrl+b %                    | Split panes vertically                   |
-| ctrl+b x                    | Kill current pane                        |
-| ctrl+b [arrow key           | Move to another pane                     |
-| ctrl+b o                    | Cycle through panes                      |
-| ctrl+b r <H, J, K, L>       | Resize panes horizontally and vertically |
-
+  |                                          |                                          |
+  | ---------------------------------------- | ---------------------------------------- |
+  | ⌘ + L | Got to the location bar |
+  | ⌃ + tab | Return to most recent tab |
+  | ⌘ + w | Close tab |
+  | ⌘ + ⇧ + tab | Reopen last closed tab or window |
+  | ⌘ + B | Bookmarks sidebar |
+  | ⌘ + ⇧ + B | Show/hide the Bookmarks toolbar |
+  | ⌘ + ⇧ + tab | Reopen last closed tab or window |
+   
 ### Install oh-my-zsh
 
 1. Install under your /home/.oh-my-zsh folder
@@ -354,7 +348,7 @@
 | Format Checker  | Prettier                                                                 |
 | DevOps          | LiveShare, Docker Containers, Markdown                                   |
 
-### Settings
+### Shortcuts
 
 | Category                               | Description         |
 | -------------------------------------- | ------------------- |
