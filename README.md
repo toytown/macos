@@ -97,7 +97,8 @@
   | ⌘ + W       | Close the front window      |
   | ⌘ + ⇧ + W   | Close all windows           |
   | ⌘ + F       | Use app in full screen mode |
-  | ⌘ + N       | Create new folder           |
+  | ⇧ + ⌘ + N   | Create new folder           |
+  | ⇧ +  N      | Create new window           |
   | ⌘ + ,       | Open preferences            |
   | ⌘ + 1, 2, 3 | List view, icon view...     |
 
