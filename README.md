@@ -186,25 +186,6 @@
   plugins=(git aws docker kubectl vi-mode zsh-autosuggestions zsh-syntax-highlighting)
 ```
 
-4. Add the binding keys
-   _Optional: Some key bindings and aliases need to be added in \~/.zshrc for easier navigation in the terminal_
-
-```
-    # bindkey
-    bindkey "^U"    backward-kill-line
-    bindkey "^u"    backward-kill-line
-    bindkey "^[l"   down-case-word
-    bindkey "^[L"   down-case-word
-
-    # alt+<- | alt+->
-    bindkey "^[f" forward-word
-    bindkey "^[b" backward-word
-
-    # ctrl+<- | ctrl+->
-    bindkey "^[[1;5D" backward-word
-    bindkey "^[[1;5C" forward-word
-
-```
 
 5. Add aliases for isengard, nvim etc
 
@@ -215,7 +196,8 @@
     alias iga='isengardcli assume'
 
     # vim aliases
-    alias vim="nvim"
+    alias ll="ls -lart"
+    
 ```
 
 6. Install powerlevel10k theme
@@ -325,8 +307,11 @@
 ### Set global or local version
 
 ```
-    asdf global nodejs 16.18.0
-    asdf local python 3.11.1
+    #global
+    asdf set nodejs 16.5.0
+
+    #local
+    asdf set -u nodejs 16.5.0
 ```
 
   <img src="images/asdf_tools.png" alt="asdf" width="300"/>
