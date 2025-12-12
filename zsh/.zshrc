@@ -110,33 +110,15 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# bindkey
-bindkey "^U"    backward-kill-line
-bindkey "^u"    backward-kill-line
-bindkey "^[l"   down-case-word
-bindkey "^[L"   down-case-word
 
-# alt+<- | alt+->
-bindkey "^[f" forward-word
-bindkey "^[b" backward-word
-
-# ctrl+<- | ctrl+->
-bindkey "^[[1;5D" backward-word
-bindkey "^[[1;5C" forward-word
 
 # aliases for isengad
 alias ig=isengardcli
 alias igl='isengardcli list'
 alias iga='isengardcli assume'
 
-# vim aliases
-export PATH=$PATH:~/.local/bin
-alias lv="lvim"
-alias vim="lvim"
 
-export GOPROXY=direct
-export GOPATH=$HOME/go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+alias ll="ls -lart"
+alias c="cat"
 
-. /usr/local/opt/asdf/libexec/asdf.sh
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
