@@ -134,6 +134,8 @@
   - Configure Status bar to show more info like git branch by adding component
 
   ![terminal_profile_keys](images/profile_keys.png)
+  ![profile_key_shortcuts](images/key_shortcut_iterm.png)
+
 
   _(Note: useful for terminal navigation. Like jump by word)_
 
